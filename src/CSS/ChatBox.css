@@ -1,0 +1,131 @@
+.chat {
+  background-color: aquamarine;
+  padding: 10px;
+  border-radius: 8px;
+  height: 99vh;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-head {
+  height: 20%;
+  background-color: aquamarine;
+}
+
+.chat-list {
+  height: 65%;
+  background-color: rgb(215, 255, 242);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.chat-send-section {
+  height: 13%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+  margin-top: 10px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.info-container {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.info-container p {
+  padding: 10px;
+  font-size: 15px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: black;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.message-left {
+  text-align: left;
+
+  align-self: flex-start;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.message-right {
+  text-align: right;
+
+  align-self: flex-end;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  margin-right: 10px;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
