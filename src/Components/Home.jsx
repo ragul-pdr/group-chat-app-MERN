@@ -1,38 +1,42 @@
 import { useNavigate } from "react-router-dom";
 import { useUserContext } from "../context/userContext";
-import '../CSS/Home.css'
+import "../CSS/Home.css";
 
 const Home = () => {
-
-  const {username, setUserName} = useUserContext();
+  const { username, setUserName } = useUserContext();
   const navigate = useNavigate();
 
-    function handleChange(e){
-        e.preventDefault();
-        setUserName(e.target.value);
-    }
+  function handleChange(e) {
+    e.preventDefault();
+    setUserName(e.target.value);
+  }
 
   function onSubmit() {
-    // console.log(username)
-    navigate("/selectGroup");
-    // setUserName("")
+    navigate("/chatBox");
   }
 
   return (
-    <div className="home">
-      <h1>Group Chat App</h1>
-      <input
-        className="my-2"
-        type="text"
-        placeholder="Enter User Name..."
-        value={username}
-        onChange={handleChange}
-        required
-      />
-      <br />
-      <button className="btn btn-primary" onClick={onSubmit}>
-        Submit
-      </button>
+    <div className="login-card">
+      <div className="home">
+        <h1>Group Chat App</h1>
+        <h3>Login</h3>
+        <form action="" onSubmit={onSubmit}>
+          <input
+            className="my-2"
+            type="text"
+            placeholder="Enter User Name..."
+            onChange={handleChange}
+            required
+          />
+          <br />
+          <input type="password" placeholder="Enter Password" required />
+          <br />
+          <br />
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

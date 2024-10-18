@@ -5,12 +5,19 @@ export const UserContext = createContext();
 export const UserContextProvider = ({ children }) => {
   const [username, setUserName] = useState("");
   const [group, setGroup] = useState("");
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
-  const [groupMessages, setGroupMessages] = useState({}); 
-  const [availableGroups,setAvailableGroups] = useState(['ReactJS', 'NodeJs', 'MERN', 'Java', 'AI']);
-
-
+  const [groupMessages, setGroupMessages] = useState({});
+  const [availableGroups, setAvailableGroups] = useState([
+    "ReactJS",
+    "NodeJs",
+    "MERN",
+    "Java",
+    "AI",
+    "Angular",
+    "Python",
+   
+  ]);
 
   const addGroup = (newGroup) => {
     if (!availableGroups.includes(newGroup)) {
@@ -19,17 +26,13 @@ export const UserContextProvider = ({ children }) => {
   };
 
   const addMessageToGroup = (group, newMessage) => {
-    setGroupMessages(prev => ({
+    setGroupMessages((prev) => ({
       ...prev,
-      [group]: [...(prev[group] || []), newMessage], 
+      [group]: [...(prev[group] || []), newMessage],
     }));
   };
 
-
-  // const resetUserState = () => {
-  //   setUserName("");
-  //   setGroup("");
-  // };
+ 
 
   return (
     <UserContext.Provider
@@ -40,13 +43,13 @@ export const UserContextProvider = ({ children }) => {
         setGroup,
         message,
         setMessage,
-        messages, 
+        messages,
         setMessages,
         availableGroups,
+        setAvailableGroups,
         groupMessages,
         addMessageToGroup,
-        addGroup
-        // resetUserState
+        addGroup,
       }}
     >
       {children}

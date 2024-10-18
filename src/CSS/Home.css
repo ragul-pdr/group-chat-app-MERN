@@ -1,29 +1,39 @@
-.home{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    /* border: 1px solid black; */
-    height: 97vh;
-    width: 500px;
-    /* border-radius: 20px; */
-    background-color: aquamarine;
+.login-card {
+  display: flex;
+  height: 100vh;
+  background-color: rgb(37, 95, 95);
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
 }
-.home h1{
-    font-size: 30px;
-    margin-bottom: 20px;
-   
-}
-input{
-    border: none;
-    border-radius: 30px;
-    width: 200px;
-    height: 40px;
 
+.home {
+  display: flex;
+  border-radius: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* border: 1px solid black; */
+  height: 400px;
+  width: 500px;
+  box-shadow: 0px 0px 30px 5px rgb(90, 162, 102);
+  /* border-radius: 20px; */
+  background-color: aquamarine;
 }
-.home input::placeholder{
-    padding: 10px;
-    margin-left: 10px;
-    font-size: 17px;
+.home h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+input {
+  border: 0px;
+  border-radius: 30px;
+  width: 300px;
+  height: 40px;
+}
+
+.home input::placeholder {
+  padding: 10px;
+  margin-left: 10px;
+  font-size: 17px;
 }
